@@ -46,7 +46,7 @@ describe('LocationService', () => {
     const norwayRequest = httpMock.expectOne('./assets/norway.json');
     norwayRequest.flush({cities: ['Oslo', 'Bergen', 'Trondheim']});
 
-    const usaRequest = httpMock.expectOne('./assets/usa2.json');
+    const usaRequest = httpMock.expectOne('./assets/usa.json');
     usaRequest.error(new ErrorEvent('ERROR_LOADING_COUNTRY'));
 
     httpMock.verify();
@@ -61,7 +61,7 @@ describe('LocationService', () => {
     const countryRequest = httpMock.expectOne('./assets/countries.json');
     countryRequest.flush({countries: ['usa', 'norway']});
 
-    const usaRequest = httpMock.expectOne('./assets/usa2.json');
+    const usaRequest = httpMock.expectOne('./assets/usa.json');
     usaRequest.flush({cities: ['New York', 'Chicago', 'Denver']});
 
     const norwayRequest = httpMock.expectOne('./assets/norway.json');
@@ -85,7 +85,7 @@ describe('LocationService', () => {
     const countryRequest = httpMock.expectOne('./assets/countries.json');
     countryRequest.flush({countries: ['usa', 'norway']});
 
-    const usaRequest = httpMock.expectOne('./assets/usa2.json');
+    const usaRequest = httpMock.expectOne('./assets/usa.json');
     usaRequest.flush({cities: ['New York', 'Chicago', 'Denver']});
 
     const norwayRequest = httpMock.expectOne('./assets/norway.json');
