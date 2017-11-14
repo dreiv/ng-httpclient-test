@@ -9,9 +9,9 @@
     "build:ci": "npm run test && ng build --prod -bh \"https://dreiv.github.io/ng-httpclient-test/\"",
     "test": "ng test --browser ChromeHeadless --single-run",
     "watch": "ng test --browser ChromeHeadless",
-    "lint": "ng lint",
+    "lint": "ng lint --fix",
     "e2e": "ng e2e",
-    "precommit": "ng lint && npm run test"
+    "precommit": "npm run lint && npm run test"
   },
   "private": true,
   "dependencies": {

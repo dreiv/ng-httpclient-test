@@ -21,7 +21,7 @@ export class LocationService {
           .map((country: string) => this.http
             .get(`./assets/${country}.json`)
             .map((locations: any) => {
-              return {country: country, cities: locations.cities};
+              return {country: country.toUpperCase(), cities: locations.cities};
             })))
       ).catch(e => Observable.of({failure: e}));
   }
