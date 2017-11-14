@@ -6,11 +6,12 @@
     "ng": "ng",
     "start": "ng serve --aot",
     "build": "ng build",
-    "build:ci": "ng build --prod -bh \"https://dreiv.github.io/ng-httpclient-test/\"",
-    "test": "ng test",
+    "build:ci": "npm run test && ng build --prod -bh \"https://dreiv.github.io/ng-httpclient-test/\"",
+    "test": "ng test --browser ChromeHeadless --single-run",
+    "watch": "ng test --browser ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "precommit": "npm run lint"
+    "precommit": "ng lint && npm run test"
   },
   "private": true,
   "dependencies": {
